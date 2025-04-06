@@ -132,7 +132,6 @@ public class Minepacks extends JavaPlugin implements MinepacksPlugin, IPlugin
 		if (MCVersion.is(MCVersion.UNKNOWN) || !MCVersion.isUUIDsSupportAvailable() || MCVersion.isNewerThan(MCVersion.MC_NMS_1_21_R3))
 		{
 			this.warnOnVersionIncompatibility();
-			this.setEnabled(false);
 			return false;
 		}
 		return true;
@@ -152,7 +151,6 @@ public class Minepacks extends JavaPlugin implements MinepacksPlugin, IPlugin
 		if(at.pcgamingfreaks.PluginLib.Bukkit.PluginLib.getInstance().getVersion().olderThan(new Version(MagicValues.MIN_PCGF_PLUGIN_LIB_VERSION)))
 		{
 			getLogger().warning("You are using an outdated version of the PCGF PluginLib! Please update it!");
-			setEnabled(false);
 			return false;
 		}
 		/*end[STANDALONE]*/
